@@ -1,0 +1,144 @@
+.table-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.output-table {
+  font-size: 16px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  min-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.output-table td,
+.output-table th {
+  text-align: center;
+  padding: 9px;
+}
+
+.output-table td {
+  border-right: 1px solid #faf7f7;
+  font-size: 15px;
+}
+
+.output-table thead th {
+  color: #ffffff;
+  background: #4caf50;
+  width: 25%;
+}
+
+.output-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #1a3755;
+}
+
+.output-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.deleteButton {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  background-color: #f44336;
+  color: white;
+  transition: 0.3s;
+}
+
+.deleteButton:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.editButton {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  background-color: #2196f3;
+  color: white;
+  transition: 0.3s;
+}
+
+.editButton:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pagination_buttons {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  float: right;
+  padding: 10px;
+}
+
+
+.viewButton {
+  padding: 15px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #1a3755;
+  color: white;
+  transition: 0.3s;
+  min-width: 100px;
+}
+
+.pagination_buttons_page {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  float: right;
+  padding: 10px;
+}
+
+
+.viewButton_page{
+  padding: 15px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #1a3755;
+  color: white;
+  transition: 0.3s;
+  min-width: 50px;
+}
+
+.listbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.listbar > h2 {
+  margin-left: 1%;
+  color: #4caf50;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.filterBox {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filterBox > input {
+  margin-top: 4px;
+  padding: 5px 20px;
+  width: fit-content;
+  outline: none;
+}
