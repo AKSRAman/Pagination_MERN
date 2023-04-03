@@ -84,7 +84,7 @@ const StudentList = () => {
       <div>
         <h2>PAGINATION</h2>
         <div className="listbar">
-          <h2> Student List With Page</h2>
+          <h2> Student List Without Pages</h2>
         </div>
         <div className="table-cover">
           <table className="output-table">
@@ -143,7 +143,7 @@ const StudentList = () => {
       <br />
       <div>
         <div className="listbar">
-          <h2> Student List Without Page</h2>
+          <h2> Student List With Pages</h2>
         </div>
         <div className="table-cover">
           <table className="output-table">
