@@ -19,7 +19,7 @@ const getAllStudentData = async (req, res) => {
     if (skip < 0) {
       skip = 0
     }
-    const details = await studentMarksModel.find({}).skip(skip).limit(limit);
+    const details = await studentMarksModel.find({}).sort({createdAt:-1}).skip(skip).limit(limit);
 
     return res.status(200).send({
       status: true,
