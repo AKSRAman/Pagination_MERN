@@ -140,7 +140,6 @@ const StudentList = () => {
       </div>
       <br />
       <br />
-      <br />
       <div>
         <div className="listbar">
           <h2> Student List With Pages</h2>
