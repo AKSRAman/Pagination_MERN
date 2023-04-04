@@ -4,19 +4,16 @@ import axios from "axios";
 
 const StudentList = () => {
   const [studentData, setStudentData] = useState([]);
-  const [cacheStudentData, setCacheStudentData] = useState([]);
   const [limit, setLimit] = useState(5);
   const [skip, setSkip] = useState(0);
   const [total, setTotal] = useState(0);
-  const [pageArray, setPageArray] = useState([]);
-  const [page, setPage] = useState(0);
+  const [pageArray, setPageArray] = useState([]); // for pages 1 ,2  3, 4, 5, 6
 
   const getAllStudentData = async (myskip) => {
     try {
       const res = await axios.get(
         `http://localhost:3001/student?skip=${myskip}&limit=${limit}`
       );
-      setCacheStudentData([...studentData, ...res.data.data]);
       setStudentData(res.data.data);
       setTotal(res.data.total);
       let roundTotal = roundDownToMultiple(res.data.total, limit);
@@ -49,7 +46,7 @@ const StudentList = () => {
     }
   };
 
-  const getDataByPaginationByPage = async (e, pageNumber) => {
+  const getDataByPaginationByPage = async (e, pageNumber) => { // for pages 1 ,2  3, 4, 5, 6
     try {
       let myskip = (pageNumber - 1) * limit;
       getAllStudentData(myskip);
@@ -59,14 +56,14 @@ const StudentList = () => {
     }
   };
 
-  function roundDownToMultiple(number, multiple) {
+  function roundDownToMultiple(number, multiple) { // for pages 1 ,2  3, 4, 5, 6
     if (number % multiple === 0) {
       return number;
     }
     return number - (number % multiple) + multiple;
   }
 
-  function setPageCountArray(count) {
+  function setPageCountArray(count) { // for pages 1 ,2  3, 4, 5, 6
     count = count / limit;
     let countArray = [];
     for (let i = 1; i <= count; i++) {
@@ -139,6 +136,7 @@ const StudentList = () => {
         </div>
       </div>
       <br />
+      {/* Student List With Pages */}
       <br />
       <div>
         <div className="listbar">
